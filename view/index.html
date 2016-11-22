@@ -20,11 +20,13 @@
         <!-- logo -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle show pull-left" data-target="sidebar">
-                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                    class="icon-bar"></span><span class="icon-bar"></span>
             </button>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
                     aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                    class="icon-bar"></span><span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#"><img src="../img/yumLogo.png"></a>
         </div>
@@ -58,7 +60,7 @@
             <li><a href="#">门店仓库</a></li>
             <li><a href="#">加工中心</a></li>
             <li><a href="#">物流配送</a></li>
-            <li class="has-sub">
+            <li class="has_sub">
                 <a href="javascript:void(0);"><span>系统配置</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
                 <ul class="sub-menu">
                     <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>微信参数管理</a></li>
@@ -105,7 +107,9 @@
                 </li>
                 <li class="list-group-item">
                     <span class="badge">2016.4.28</span>
-                    <p>让bootstrap的carousel插件支持手势（<a href="sample/carousel.html" target="_blank">样例</a>）（<a href="https://github.com/hammerjs/jquery.hammer.js" target="_blank">jquery.hammer官网</a>）（<a href="http://hammerjs.github.io/" target="_blank">hammer.js官网</a>）</p>
+                    <p>让bootstrap的carousel插件支持手势（<a href="sample/carousel.html" target="_blank">样例</a>）（<a
+                            href="https://github.com/hammerjs/jquery.hammer.js" target="_blank">jquery.hammer官网</a>）（<a
+                            href="http://hammerjs.github.io/" target="_blank">hammer.js官网</a>）</p>
                     <p>
                         使用说明：页面需要引用hammer.min.js、jquery.hammer.js
                     </p>
@@ -113,10 +117,11 @@
                 </li>
                 <li class="list-group-item">
                     <span class="badge">2016.7.1</span>
-                    <p>页面加载进度条（<a href="sample/pace.html" target="_blank">样例</a>）（<a href="http://github.hubspot.com/pace/docs/welcome/" target="_blank">官网</a>）</p>
+                    <p>页面加载进度条（<a href="sample/pace.html" target="_blank">样例</a>）（<a
+                            href="http://github.hubspot.com/pace/docs/welcome/" target="_blank">官网</a>）</p>
                     <p>
-                        使用说明：1.页面需要引用pace.min.js、dataurl.css <br />
-                        2.官网提供多种样式供选择，只需要下载相应的css文件替换掉原来的css文件就行<br />
+                        使用说明：1.页面需要引用pace.min.js、dataurl.css <br/>
+                        2.官网提供多种样式供选择，只需要下载相应的css文件替换掉原来的css文件就行<br/>
                         3.dataurl.css里面可以调整进度条位置
                     </p>
                 </li>
@@ -179,7 +184,8 @@
                 </li>
                 <li class="list-group-item">
                     <span class="badge">UI库&nbsp;2016.4.29</span>
-                    <a href="ui.html?#ui-masonry">加入masonry流式布局插件&nbsp;<label class="label label-danger">强烈推荐</label></a>
+                    <a href="ui.html?#ui-masonry">加入masonry流式布局插件&nbsp;<label
+                            class="label label-danger">强烈推荐</label></a>
                 </li>
                 <li class="list-group-item">
                     <span class="badge">UI库&nbsp;2016.5.4</span>
@@ -251,21 +257,21 @@
     $('[data-target="sidebar"]').click(function () {
         var asideleft = $(".sidebar").offset().left;
         if (asideleft == 0) {
-            $(".sidebar").animate({ left: -220 });
-            $(".all").animate({ marginLeft: 0 });
+            $(".sidebar").animate({left: -220});
+            $(".all").animate({marginLeft: 0});
         }
         else {
-            $(".sidebar").animate({ left: 0 });
-            $(".all").animate({ marginLeft: 220 });
+            $(".sidebar").animate({left: 0});
+            $(".all").animate({marginLeft: 220});
         }
     });
     $(window).resize(function () {
         if ($(window).width() < 768) {
-            $(".sidebar").css({ left: -220 });
-            $(".all").css({ marginLeft: 0 });
+            $(".sidebar").css({left: -220});
+            $(".all").css({marginLeft: 0});
         } else {
-            $(".sidebar").animate({ left: 0 });
-            $(".all").animate({ marginLeft: 220 });
+            $(".sidebar").animate({left: 0});
+            $(".all").animate({marginLeft: 220});
         }
     })
     $(window).scroll(function () {
@@ -276,13 +282,13 @@
             $('#goTop').show();
         }
     });
-    $(".sidebar >.nav > li").on("click",function (e) {
+    $(".sidebar >.nav > li").on("click", function (e) {
         $(".sidebar >.nav > .active").removeClass("active");
         $(this).addClass("active");
-        if($(this).hasClass("has-sub")){
-            alert();
-            $(this).children(".sub-menu").slideToggle("slow");
-        }
+        var className = this.getAttribute("class");
+        if (className.indexOf("has_sub") != -1)//有下级的菜单
+            console.log("有下级" + $(this).find("ul"));
+        // slideToggle("slow");
     });
 
 </script>
