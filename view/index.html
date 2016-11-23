@@ -12,77 +12,139 @@
     <link href="../css/myLeftNav.css" rel="stylesheet" type="text/css">
     <link href="../css/default.css" rel="stylesheet" type="text/css">
     <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<!-- 导航 -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <!-- logo -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle show pull-left" data-target="sidebar">
-                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
-                    class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
-                    class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img src="../img/yumLogo.png"></a>
+
+<!-- 顶部导航 -->
+<header id="header">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- logo -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle show pull-left" data-target="collapse_customer">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                        class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="../img/yumLogo.png"></a>
+            </div>
+            <!-- 右侧 -->
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="javascript:;">河南易石</a></li>
+                    <li><a href="javascript:;">SVN</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-expanded="false"><i class="glyphicon glyphicon-user"></i> 张三 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">查看权限</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">退出登录</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="glyphicon glyphicon-log-out"></i></a></li>
+                </ul>
+            </div>
         </div>
-        <!-- 右侧 -->
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav pull-right">
-                <li><a href="javascript:;">河南易石</a></li>
-                <li><a href="javascript:;">SVN</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-expanded="false"><i class="glyphicon glyphicon-user"></i> 张三 <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">修改密码</a></li>
-                        <li><a href="#">查看权限</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">退出登录</a></li>
-                    </ul>
-                </li>
-                <li><a href="javascript:;"><i class="glyphicon glyphicon-log-out"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
+</header>
 <!-- 导航以下 -->
+
 <div class="container-fluid all">
-    <div class="sidebar">
+
+    <div class="sidebar-left-nav collapse_customer">
         <ul class="nav">
-            <li class="active"><a href="#">营业监控</a></li>
-            <li><a href="#">云报表</a></li>
-            <li><a href="#">门店仓库</a></li>
-            <li><a href="#">加工中心</a></li>
-            <li><a href="#">物流配送</a></li>
-            <li class="has_sub">
-                <a href="javascript:void(0);"><span>系统配置</span><i class="fa fa-caret-right fa-fw pull-right"></i></a>
+            <li class="active"><a href="javascript:void(0);" class="left_nav_0"><i
+                    class="icon-facebook-sign"></i>菜单一</a></li>
+            <li><a href="javascript:void(0);" class="left_nav_0"><i class="glyphicon glyphicon-search"></i>菜单一</a></li>
+            <li><a href="javascript:void(0);" class="left_nav_0"><i class="glyphicon glyphicon-tasks"></i>菜单一</a></li>
+            <li><a href="javascript:void(0);" class="left_nav_0"><i class="icon-camera-retro"></i>菜单一</a></li>
+            <li><a href="javascript:void(0);" class="left_nav_0"><i class="icon-twitter-sign"></i>菜单一</a></li>
+            <li>
+                <a href="#" class="left_nav_0"><i class="icon-google-plus-sign"></i><span>菜单一</span><i
+                        class="pull-right icon-double-angle-right"></i></a>
                 <ul class="sub-menu">
-                    <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>微信参数管理</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>用户权限管理</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>硬件设备管理</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>评价管理</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>集团管理</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>品牌管理</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>区域管理</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>店铺管理</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>用户管理</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o fa-fw"></i>角色管理</a></li>
+                    <li><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="icon-double-angle-right"></i>微信参数管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>用户权限管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>硬件设备管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>评价管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>集团管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>品牌管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>区域管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>店铺管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>用户管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>角色管理</a>
+                    </li>
                 </ul>
             </li>
+            <li>
+                <a href="#" class="left_nav_0"><i class="icon-google-plus-sign"></i><span>菜单一</span><i
+                        class="pull-right icon-double-angle-right"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="javascript:void(0);" class="left_nav_1"><i class="fa fa-circle-o fa-fw"></i>微信参数管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>用户权限管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>硬件设备管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>评价管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>集团管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>品牌管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>区域管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>店铺管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>用户管理</a>
+                    </li>
+                    <li class="sub-menu-1"><a href="javascript:void(0);" class="left_nav_1"><i
+                            class="fa fa-circle-o fa-fw"></i>角色管理</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="left_nav_0">关于我们</a></li>
+            <li style="visibility:hidden"><a href="javascript:void(0);" class="left_nav_0">关于我们</a></li>
         </ul>
 
     </div>
     <div class="maincontent row">
         <!--我是主要内容 start-->
-        <ul class="breadcrumb">
-            <li class="active">首页</li>
-        </ul>
+        <ol class="breadcrumb">
+            <li class="active">Home</li>
+            <li class="active">Library</li>
+            <li class="active">Data</li>
+        </ol>
         <div class="col-sm-12">
             <div class="jumbotron">
                 <h1>这是一套开源的基于bootstrap的简易框架</h1>
@@ -230,15 +292,31 @@
     </div>
     <a href="#top" id="goTop"><i class="fa fa-angle-double-up"></i></a>
 </div>
+<!--整体滑动-->
+<div id="demo">
+    <div class="list-group"></div>
+</div>
 </body>
 <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/bootstrap-table.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/BootSideMenu.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/scrolltopcontrol.js " type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/Headroom.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jQuery.headroom.js" type="text/javascript" charset="utf-8"></script>
 
 <script type="text/javascript">
-    $('#leftMenu').BootSideMenu({
+    //隐藏头部
+    $("#header").headroom();
+    //滚动条
+    $('.collapse_customer').mCustomScrollbar({
+        setHeight: "100%",
+        theme: "minimal-dark"
+    });
+    //展开，折叠
+    $('#demo').BootSideMenu({
         // 'left' or 'right'
         side: "left",
         // animation speed
@@ -246,31 +324,33 @@
         // restore last menu status on page refresh
         remember: true,
         // auto close
-        autoClose: false,
+        autoClose: true,
         // push the whole page
-        pushBody: true,
+        pushBody: false,
         // close on click
-        closeOnClick: false,
+        closeOnClick: true,
         // width
-        width: "15%"
+        width: "20%"
     });
-    $('[data-target="sidebar"]').click(function () {
-        var asideleft = $(".sidebar").offset().left;
+    //左边菜单栏，展开，折叠
+    $('[data-target="collapse_customer"]').click(function () {
+        var asideleft = $(".collapse_customer").offset().left;
         if (asideleft == 0) {
-            $(".sidebar").animate({left: -220});
+            $(".collapse_customer").animate({left: -220});
             $(".all").animate({marginLeft: 0});
         }
         else {
-            $(".sidebar").animate({left: 0});
+            $(".collapse_customer").animate({left: 0});
             $(".all").animate({marginLeft: 220});
         }
     });
+    //平滑置顶
     $(window).resize(function () {
         if ($(window).width() < 768) {
-            $(".sidebar").css({left: -220});
+            $(".scollapse_customer").css({left: -220});
             $(".all").css({marginLeft: 0});
         } else {
-            $(".sidebar").animate({left: 0});
+            $(".collapse_customer").animate({left: 0});
             $(".all").animate({marginLeft: 220});
         }
     })
@@ -282,14 +362,37 @@
             $('#goTop').show();
         }
     });
-    $(".sidebar >.nav > li").on("click", function (e) {
-        $(".sidebar >.nav > .active").removeClass("active");
-        $(this).addClass("active");
-        var className = this.getAttribute("class");
-        if (className.indexOf("has_sub") != -1)//有下级的菜单
-            console.log("有下级" + $(this).find("ul"));
-        // slideToggle("slow");
-    });
 
+    //一级菜单
+    $(".left_nav_0").on("click", function (e) {
+        e.preventDefault();
+        $(this).parent("li").parent("ul").find(".active").removeClass("active");
+        $(this).parent("li").addClass("active");
+        if ($(this).next().length != 0) {
+            $(this).next("ul").slideToggle("slow");
+        }
+        $(".sub-menu").find(".active").removeClass("active");
+        var className = $(this).find("i").last().attr("class");
+        console.log(className);
+        if (className != undefined)
+            if (className.indexOf("icon-double-angle-right") > 0)
+                var newClassName = className.replace("icon-double-angle-right", "icon-double-angle-down");
+            else
+                var newClassName = className.replace("icon-double-angle-down", "icon-double-angle-right");
+        $(this).find("i").last().removeClass(className).addClass(newClassName);
+    });
+    //二级菜单
+    $(".left_nav_1").on("click", function (e) {
+        //移除一级菜单样式
+        if ($(this).parents("ul").length > 1) {
+            var parentUl = $(this).parents("ul")[1];
+            console.log(parentUl);
+            $(parentUl).find(".active").removeClass("active");
+        }
+        //当前列加上样式
+        $(this).parent("li").addClass("active");
+        //当前列父菜单加上样式
+        $(this).parent("li").parent("ul").parent("li").addClass("active");
+    });
 </script>
 </html>
